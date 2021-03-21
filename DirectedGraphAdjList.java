@@ -45,6 +45,9 @@ public class DirectedGraphAdjList {
         g.addEdge(5,4,3);
 
         System.out.println(g);
+        System.out.println(g.isConnected(3,5));
+        System.out.println(g.isConnected(1,2));
+        System.out.println(g.isConnected(5,4));
 
     }
 }
