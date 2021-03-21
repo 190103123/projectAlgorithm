@@ -2,18 +2,29 @@
 import java.util.*;
 class Graphs{
     class Edge{
+        //v=N vertex
+        //w=weight
         int v,w;
+        //contructor
         public Edge(int v,int w){
             this.v=v; this.w=w;
         }
+         /**when we want to print smth
+        by only the object name we must have 
+        to override the to string method**/
         @Override
         public String toString(){
             return "("+v+","+w+")";
         }
     }
+    /**array of linked lists which
+    type of Edge**/
     List<Edge> G[];
     public Graphs(int n){
+        //new object
         G=new LinkedList[n];
+        /**assign to each of the elements 
+        of array**/
         for(int i=0;i<G.length;i++)
             G[i]=new LinkedList<Edge>();
     }
@@ -22,6 +33,8 @@ class Graphs{
             if(i.v==v) return true;
         return false;
     }
+    /**return true if the vertex U and V is connected
+    by an edge**/
     void addEdge(int u,int v,int w){
         G[u].add(0,new Edge(v,w));
     }
@@ -30,6 +43,7 @@ class Graphs{
         String result="";
         for(int i = 1; i < G.length; i++)
             result+=i+"=>"+G[i]+"\n";
+            //adding everything in result 
         return result;
     }
 }
