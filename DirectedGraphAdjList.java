@@ -48,6 +48,10 @@ public class DirectedGraphAdjList {
         System.out.println(g.isConnected(3,5));
         System.out.println(g.isConnected(1,2));
         System.out.println(g.isConnected(5,4));
+        
+        System.out.println(g.isConnected(2,5));
+        System.out.println(g.isConnected(3,2));
+        System.out.println(g.isConnected(5,3));
 
     }
 }
